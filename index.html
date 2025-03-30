@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notify Me</title>
+</head>
+<body>
+    <h1>Click to Notify</h1>
+    <button id="notifyBtn">Notify</button>
+    <script>
+        document.getElementById('notifyBtn').addEventListener('click', async () => {
+            await fetch('/notify', { method: 'POST' });
+            alert('Notification sent!');
+        });
+    </script>
+</body>
+</html>
